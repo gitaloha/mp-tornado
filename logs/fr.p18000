@@ -1,0 +1,87 @@
+<ERROR> 2014-03-12 15:51:22,741 (23306, -1210165584) [main_service.write_error:26] Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 180, in get
+    raise HTTPError(405)
+HTTPError: HTTP 405: Method Not Allowed
+
+<ERROR> 2014-03-12 15:52:34,096 (23306, -1210702160) [main_service.write_error:26] Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 2286, in wrapper
+    url = self.get_login_url()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 922, in get_login_url
+    self.require_setting("login_url", "@tornado.web.authenticated")
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1058, in require_setting
+    "application to use %s" % (name, feature))
+Exception: You must define the 'login_url' setting in your application to use @tornado.web.authenticated
+
+<CRITICAL> 2014-03-12 16:02:53,698 (24519, -1210018128) [main_service.get:63] Ileggal intrution!
+<CRITICAL> 2014-03-12 16:05:46,934 (24843, -1209829712) [main_service.get:63] Ileggal intrution!
+<INFO> 2014-03-12 16:05:54,395 (24843, -1209829712) [admin_logic.view_user:17] ENTRANCE id: 1
+<ERROR> 2014-03-12 16:05:54,555 (24843, -1209829712) [main_service.write_error:26] Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 2297, in wrapper
+    return method(self, *args, **kwargs)
+  File "/data/oa_template/service/main_service.py", line 136, in get
+    ret, data = admin_logic.view_user(id)
+  File "/data/oa_template/logic/admin_logic.py", line 21, in view_user
+    ret = retcode.USER_ID_NOT_EXIST
+NameError: global name 'retcode' is not defined
+
+<INFO> 2014-03-12 16:07:17,718 (24986, -1209923920) [admin_logic.view_user:18] ENTRANCE id: 1
+<ERROR> 2014-03-12 16:07:17,879 (24986, -1209923920) [main_service.write_error:26] Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 2297, in wrapper
+    return method(self, *args, **kwargs)
+  File "/data/oa_template/service/main_service.py", line 136, in get
+    ret, data = admin_logic.view_user(id)
+  File "/data/oa_template/logic/admin_logic.py", line 24, in view_user
+    MyLogger().getlogger().error("player not exist:%d", pid)
+NameError: global name 'pid' is not defined
+
+<INFO> 2014-03-12 16:08:03,642 (24995, -1210693968) [admin_logic.view_user:18] ENTRANCE id: 1
+<ERROR> 2014-03-12 16:08:03,801 (24995, -1210693968) [admin_logic.view_user:24] player not exist:1
+<CRITICAL> 2014-03-12 16:09:40,792 (24995, -1210693968) [main_service.get:63] Ileggal intrution!
+<ERROR> 2014-03-12 16:09:40,793 (24995, -1210693968) [main_service.write_error:26] Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/data/oa_template/service/main_service.py", line 75, in get
+    if not interface_logic.check_signature(signature, timestamp, nonce, config.TOKEN):
+NameError: global name 'interface_logic' is not defined
+
+<CRITICAL> 2014-03-12 16:11:28,297 (25464, -1210333520) [main_service.get:64] Ileggal intrution!
+<ERROR> 2014-03-12 16:11:28,298 (25464, -1210333520) [main_service.write_error:27] Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/data/oa_template/service/main_service.py", line 76, in get
+    if not interface_logic.check_signature(signature, timestamp, nonce, config.TOKEN):
+AttributeError: 'module' object has no attribute 'TOKEN'
+
+<CRITICAL> 2014-03-12 16:13:59,714 (25606, -1209735504) [main_service.get:64] Ileggal intrution!
+<ERROR> 2014-03-12 16:13:59,715 (25606, -1209735504) [main_service.write_error:27] Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1141, in _when_complete
+    callback()
+  File "/usr/local/lib/python2.6/site-packages/tornado-3.1.1-py2.6.egg/tornado/web.py", line 1162, in _execute_method
+    self._when_complete(method(*self.path_args, **self.path_kwargs),
+  File "/data/oa_template/service/main_service.py", line 76, in get
+    if not interface_logic.check_signature(signature, timestamp, nonce, config.OA_TOKEN):
+  File "/data/oa_template/logic/interface_logic.py", line 20, in check_signature
+    hashstr = hashlib.sha1(tmpstr).hexdigest()
+NameError: global name 'hashlib' is not defined
+
+<CRITICAL> 2014-03-12 16:14:53,617 (25730, -1210558800) [main_service.get:64] Ileggal intrution!
